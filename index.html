@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My Portfolio</h1>
+            <p>Welcome to my personal website. Learn more about me below.</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
+        <div class="hero-image">
+            <img src="photo__.png" alt="My Photo">
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a B.Tech student in Information Technology at Government Engineering College, Bhavnagar. Passionate about technology, I thrive on problem-solving and building innovative solutions. I enjoy exploring new advancements, staying updated with industry trends, and continuously refining my technical skills through hands-on projects.</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p>Pursuing B.Tech in Information Technology at Government Engineering College, Bhavnagar (GTU).<br>
+        Completed SSC (8.5 CGPA) and HSC (7.4 CGPA) from B.L. Patel Sarvvidhya Mandir, Rankuva, Navsari.</p>
+    </section>
+    
+    <section id="interests">
+        <h2>Interests</h2>
+        <p>I am constantly exploring emerging technologies and refining my knowledge in various fields, including modern web development, intelligent systems, and secure computing.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Connect with me:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/smit-patel-a93a53325" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="mailto:spatel000021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        });
+        
+        document.querySelectorAll("nav a").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute("href").substring(1);
+                document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>
