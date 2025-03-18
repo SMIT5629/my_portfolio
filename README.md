@@ -1,7 +1,7 @@
 # 🚀 My Portfolio Website  
 
 ## 🌐 Live Demo  
-[Visit My Portfolio](#) https://smit-portfolio.github.io/my_portfolio/
+[Visit My Portfolio](#) https://smit5629.github.io/my_portfolio/
 
 ## 📖 About  
 This is my personal portfolio website showcasing my skills, projects, and experience. It includes:  
