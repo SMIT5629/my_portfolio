@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smit Patel | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+    <div class="container">
+        <div class="logo">Smit Patel</div>
+        <nav class="site-nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Hi, I'm Smit</h1>
+        <p>A passionate IT student exploring web development, intelligent systems & more.</p>
+        <a href="#about" class="btn">Explore More</a>
+      </div>
+      <div class="hero-image">
+        <img src="image.jpg" alt="Smit Patel" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a B.Tech student in Information Technology at Government Engineering College, Bhavnagar.
+        Passionate about solving problems and building innovative solutions. I keep up with the latest tech trends
+        and constantly improve my skills through hands-on projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech in IT @ Government Engineering College, Bhavnagar (GTU)</li>
+        <li>HSC (7.4 CGPA) @ B.L. Patel Sarvvidhya Mandir, Rankuva, Navsari</li>
+        <li>SSC (8.5 CGPA) @ B.L. Patel Sarvvidhya Mandir, Rankuva, Navsari</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="container">
+      <h2>Interests</h2>
+      <p>
+        I’m passionate about modern web development, intelligent systems, and secure computing.
+        I enjoy learning emerging technologies and applying them in practical projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Feel free to reach out to me:</p>
+      <ul class="contact-links">
+        <li>
+          <a href="https://www.linkedin.com/in/smit-patel-a93a53325" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="mailto:spatel000021@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Smit Patel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      document.querySelectorAll("nav a[href^='#']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          target?.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
